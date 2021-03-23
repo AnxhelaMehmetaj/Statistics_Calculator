@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.9"
+  - "3.8"
 install:
     - pip install -r requirements.txt
     - pip install pyyaml
@@ -8,10 +8,10 @@ install:
     - pip install coveralls
 # command to run tests
 script:
-  - coverage run --omit '/home/travis/virtualenv/python3.9.1/lib/python3.9/site-packages/_virtualenv.py' -m unittest discover tests && coverage report -m
+  - coverage run --omit '/home/travis/virtualenv/python3.8.7/lib/python3.8/site-packages/_virtualenv.py' -m unittest discover tests && coverage report -m
 
 branches:
   only:
-    - master
+     master
 after_success:
   coveralls
