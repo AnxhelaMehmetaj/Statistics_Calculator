@@ -1,4 +1,4 @@
-from operations.basic_operations import BasicOperations
+from operations.calc_operations import BasicOperations
 
 
 class Calculator:

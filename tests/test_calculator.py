@@ -1,34 +1,23 @@
 import unittest
-
-# the .py file name is Calculator and the class name is also Calculator
-
-# Move Section to fileReader.py
 from src.calculator import Calculator
 from CSV_Reader.CSVReader import readCSV
 
 
-'''
-This is the TestCase class that tests Calculator class functions.
-'''
-
-
 class TestCalculator(unittest.TestCase):
-    # this is the Calculator class instance.
     calculator = None
 
-    # class level setup function, execute once only before any tests function.
     @classmethod
     def setUpClass(cls):
         print('')
         print('setUpClass')
 
-    # class level setup function, execute once only after all tests function's execution.
+
     @classmethod
     def tearDownClass(cls):
         print('')
         print('tearDownClass')
 
-    # execute before every tests case function run.
+
     def setUp(self):
         self.calculator = Calculator()
         print('')
