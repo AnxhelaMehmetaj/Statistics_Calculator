@@ -3,7 +3,7 @@ from operations.population_operations import PopulationOperations
 from src.calculator import Calculator
 
 
-class Population_Sampling_Calculator(Calculator):
+class PopulationCalculator(Calculator):
 
     def __init__(self):
         Calculator.__init__(self)
