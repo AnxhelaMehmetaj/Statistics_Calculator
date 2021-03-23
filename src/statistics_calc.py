@@ -7,26 +7,26 @@ class StatisticsCalculator(Calculator):
     def __init__(self):
         Calculator.__init__(self)
 
-    def mean(self, input_list: list) -> float:
-        self.results.append(StatisticsOperations.mean(input_list))
+    def mean(self, inputnumbers: list) -> float:
+        self.results.append(StatisticsOperations.mean(inputnumbers))
         return self.results[-1]
 
-    def median(self, input_list: list) -> float:
-        self.results.append(StatisticsOperations.median(input_list))
+    def median(self, inputnumbers:float):
+        self.results.append(StatisticsOperations.median(inputnumbers))
         return self.results[-1]
 
-    def modes(self, input_list: list) -> list:
-        self.results.append(StatisticsOperations.modes(input_list))
+    def modes(self, inputnumbers: list):
+        self.results.append(StatisticsOperations.modes(inputnumbers))
         return self.results[-1]
 
-    def variance(self, input_list: list) -> float:
-        self.results.append(StatisticsOperations.variance(input_list))
+    def variance(self, inputnumbers: list) -> float:
+        self.results.append(StatisticsOperations.variance(inputnumbers))
         return self.results[-1]
 
-    def standardDeviation(self, input_list: list) -> float:
-        self.results.append(StatisticsOperations.standardDeviation(input_list))
+    def standardDeviation(self, inputnumbers: list) -> float:
+        self.results.append(StatisticsOperations.standardDeviation(inputnumbers))
         return self.results[-1]
 
-    def zScores(self, input_list: list) -> list:
-        self.results.append(StatisticsOperations.zScore(input_list))
+    def zScores(self, inputnumbers: list) -> list:
+        self.results.append(StatisticsOperations.zScore(inputnumbers))
         return self.results[-1]

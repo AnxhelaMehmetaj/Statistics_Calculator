@@ -1,4 +1,4 @@
-class BasicOperations:
+class calcOperations:
     @staticmethod
     def addition(x, y):
         result = float(x) + float(y)

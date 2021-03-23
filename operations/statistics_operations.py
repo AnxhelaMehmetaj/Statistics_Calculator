@@ -1,28 +1,28 @@
-from operations.calc_operations import BasicOperations
+from operations.calc_operations import calcOperations
 
 
 class StatisticsOperations:
     @staticmethod
-    def mean(numbers: list) -> float:
-        summation = 0.0
+    def mean(numbers):
+        sum = 0.0
         for number in numbers:
-            summation = BasicOperations.addition(summation, number)
-        return BasicOperations.division(summation, len(numbers))
+            sum = calcOperations.addition(sum, number)
+        return calcOperations.division(sum, len(numbers))
 
     @staticmethod
-    def median(numbers: list) -> float:
+    def median(numbers: float):
         numbers = sorted(numbers)
         if len(numbers) % 2 == 1:
-            middleIndex = int(BasicOperations.division(len(numbers) - 1, 2))
-            median = numbers[middleIndex]
+            centerIndex = int(calcOperations.division(len(numbers) - 1, 2))
+            median = numbers[centerIndex]
         else:
-            leftMiddleIndex = int(BasicOperations.subtraction(BasicOperations.division(len(numbers) - 1, 2), 0.5))
-            rightMiddleIndex = int(BasicOperations.addition(BasicOperations.division(len(numbers) - 1, 2), 0.5))
-            median = BasicOperations.division(BasicOperations.addition(numbers[leftMiddleIndex], numbers[rightMiddleIndex]), 2)
+            leftIndex = int(calcOperations.subtraction(calcOperations.division(len(numbers) - 1, 2), 0.5))
+            rightIndex = int(calcOperations.addition(calcOperations.division(len(numbers) - 1, 2), 0.5))
+            median = calcOperations.division(calcOperations.addition(numbers[leftIndex], numbers[rightIndex]), 2)
         return float(median)
 
     @staticmethod
-    def modes(numbers: list) -> list:
+    def modes(numbers: list):
         dictionary = {}
         for number in numbers:
             if number in dictionary.keys():
@@ -30,14 +30,14 @@ class StatisticsOperations:
             else:
                 dictionary[number] = 1
 
-        maxOccurrences = 0
+        repeatednum = 0
         for number in numbers:
-            if dictionary[number] > maxOccurrences:
-                maxOccurrences = dictionary[number]
+            if dictionary[number] > repeatednum:
+                repeatednum = dictionary[number]
 
         modes = []
         for number in dictionary.keys():
-            if dictionary[number] == maxOccurrences:
+            if dictionary[number] == repeatednum:
                 modes.append(number)
         return modes
 
@@ -46,13 +46,13 @@ class StatisticsOperations:
         mean = StatisticsOperations.mean(numbers)
         squaredDifferences = []
         for number in numbers:
-            squaredDifferences.append(BasicOperations.square(BasicOperations.subtraction(mean, number)))
-        variance = BasicOperations.division(sum(squaredDifferences), len(numbers))
+            squaredDifferences.append(calcOperations.square(calcOperations.subtraction(mean, number)))
+        variance = calcOperations.division(sum(squaredDifferences), len(numbers))
         return variance
 
     @staticmethod
     def standardDeviation(numbers: list) -> float:
-        standardDeviation = BasicOperations.squareRoot(StatisticsOperations.variance(numbers))
+        standardDeviation = calcOperations.squareRoot(StatisticsOperations.variance(numbers))
         return standardDeviation
 
     @staticmethod
@@ -61,5 +61,5 @@ class StatisticsOperations:
         standardDeviation = StatisticsOperations.standardDeviation(numbers)
         mean = StatisticsOperations.mean(numbers)
         for number in numbers:
-            zScores.append(BasicOperations.division(BasicOperations.subtraction(number, mean), standardDeviation))
+            zScores.append(calcOperations.division(calcOperations.subtraction(number, mean), standardDeviation))
         return zScores
