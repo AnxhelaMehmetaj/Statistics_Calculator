@@ -1,18 +1,21 @@
+
 from operations.population_operations import PopulationOperations
 from src.calculator import Calculator
 
 
-class PopulationCalculator(Calculator):
+class Population_Sampling_Calculator(Calculator):
 
     def __init__(self):
         Calculator.__init__(self)
 
-    def sample_random(self, input_list, new_list_length):
+    def random_sampling(self, input_list, new_list_length):
         self.results.append(PopulationOperations.samplelist(input_list, new_list_length))
         return self.results[-1]
 
-    def confidence_interval(self, confidence, sample_list):
-        self.results.append(PopulationOperations.confidenceinterval(confidence, sample_list))
+    def confidence_interval_for_sample(self, confidence, sample_list):
+        self.results.append(PopulationOperations.confidenceinterval(confidence
+
+                                                                    , sample_list))
         return self.results[-1]
 
     def margin_error(self, input_list):
