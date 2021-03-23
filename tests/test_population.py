@@ -17,7 +17,12 @@ class SamplingTestCase(unittest.TestCase):
     def testInstantiateCalculator(self):
         self.assertIsInstance(self.calc_obj, PopulationCalculator)
 
-
+    def test_sample_random(self):
+        print("******test_random_sampling******")
+        sample_list = self.calc_obj.sample_random(original_list, 8)
+        print("Random Sample List")
+        print(sample_list, "\n")
+        self.assertEqual(sample_list, [49.0, 44.0, 42.0, 46.0, 43.0, 47.0, 50.0, 49.0])
 
 
     def test_confidence_interval(self):
