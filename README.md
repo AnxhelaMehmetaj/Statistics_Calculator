@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.com/AnxhelaMehmetaj/Statistics_Calculator.svg?branch=master)](https://travis-ci.com/AnxhelaMehmetaj/Statistics_Calculator)
+[![Coverage Status](https://coveralls.io/repos/github/AnxhelaMehmetaj/Statistics_Calculator/badge.svg?branch=master)](https://coveralls.io/github/AnxhelaMehmetaj/Statistics_Calculator?branch=master)
