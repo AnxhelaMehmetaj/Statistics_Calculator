@@ -12,6 +12,6 @@ script:
 
 branches:
   only:
-     master
+    - master
 after_success:
   coveralls
