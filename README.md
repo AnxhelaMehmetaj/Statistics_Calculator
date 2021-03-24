@@ -4,3 +4,7 @@
 
  ## Contributer
  Anxhela Mehmetaj
+ 
+ ## Descriptive Statistics Calculator 
+  Methods--> Mean, Median, Variance, StandardDeviation,ZScore (using @staticmethod)
+  
