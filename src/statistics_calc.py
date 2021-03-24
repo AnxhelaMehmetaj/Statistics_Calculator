@@ -15,9 +15,7 @@ class StatisticsCalculator(Calculator):
         self.results.append(StatisticsOperations.median(inputnumbers))
         return self.results[-1]
 
-    def modes(self, inputnumbers: list):
-        self.results.append(StatisticsOperations.modes(inputnumbers))
-        return self.results[-1]
+
 
     def variance(self, inputnumbers: list) -> float:
         self.results.append(StatisticsOperations.variance(inputnumbers))

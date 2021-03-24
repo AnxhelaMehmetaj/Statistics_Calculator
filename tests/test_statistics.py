@@ -31,14 +31,7 @@ class TestCases(unittest.TestCase):
         actualValue = self.calculator.median(randomList)
         self.assertEqual(expectedValue, actualValue)
 
-    def testMode(self):
-        randomList = []
-        for i in range(0, 100000):
-            randomNumber = random.randint(0, 1000)
-            randomList.append(randomNumber)
-        expectedValue = statistics.multimode(randomList)
-        actualValue = self.calculator.modes(randomList)
-        self.assertEqual(expectedValue, actualValue)
+
 
     def testVariance(self):
         randomList = []

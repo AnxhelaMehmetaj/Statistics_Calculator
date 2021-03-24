@@ -21,25 +21,6 @@ class StatisticsOperations:
             median = calcOperations.division(calcOperations.addition(numbers[leftIndex], numbers[rightIndex]), 2)
         return float(median)
 
-    @staticmethod
-    def modes(numbers: list):
-        dictionary = {}
-        for number in numbers:
-            if number in dictionary.keys():
-                dictionary[number] += 1
-            else:
-                dictionary[number] = 1
-
-        repeatednum = 0
-        for number in numbers:
-            if dictionary[number] > repeatednum:
-                repeatednum = dictionary[number]
-
-        modes = []
-        for number in dictionary.keys():
-            if dictionary[number] == repeatednum:
-                modes.append(number)
-        return modes
 
     @staticmethod
     def variance(numbers: list) -> float:
